@@ -1,0 +1,9 @@
+.item {
+  font-size: 20px;
+  font-weight: bold;
+}
+.searchBox {
+  margin-bottom: 10px;
+  padding: 4px;
+  font-size: 20px;
+}

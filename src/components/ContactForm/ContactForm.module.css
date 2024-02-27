@@ -1,0 +1,42 @@
+.form {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 4px;
+  font-size: 20px;
+}
+
+.error {
+  font-size: 18px;
+  font-weight: 500;
+  color: orangered;
+}
+
+.btn {
+  height: 35px;
+  width: 130px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: gray;
+}
