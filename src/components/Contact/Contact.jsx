@@ -17,6 +17,8 @@ const customStyles = {
   },
 };
 
+Modal.setAppElement('#root');
+
 const Contact = ({ contact: { name, number, id } }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
