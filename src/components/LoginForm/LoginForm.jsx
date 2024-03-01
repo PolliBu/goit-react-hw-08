@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import css from './LoginForm.module.css';
@@ -13,7 +14,14 @@ const LoginForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       }),
-    );
+    )
+      .unwrap()
+      .then(() => {
+        toast.success('login success');
+      })
+      .catch(() => {
+        toast.error('login error');
+      });
     form.reset();
   };
 
