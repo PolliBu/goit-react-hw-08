@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
+import TitlePage from '../../components/TitlePage/TitlePage';
 import ContactList from '../../components/ContactList/ContactList';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { fetchContacts } from '../../redux/contacts/operations';
@@ -20,9 +20,7 @@ export default function Tasks() {
 
   return (
     <>
-      <Helmet>
-        <title>Your contacts</title>
-      </Helmet>
+      <TitlePage>Your contacts</TitlePage>
       <Title />
       <ContactForm />
       <SearchBox />

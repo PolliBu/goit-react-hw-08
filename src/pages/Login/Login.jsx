@@ -1,12 +1,10 @@
-import { Helmet } from 'react-helmet';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import TitlePage from '../../components/TitlePage/TitlePage';
 
 export default function Login() {
   return (
     <div>
-      <Helmet>
-        <title>Login</title>
-      </Helmet>
+      <TitlePage>Login</TitlePage>
       <LoginForm />
     </div>
   );
