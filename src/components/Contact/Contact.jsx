@@ -32,7 +32,7 @@ const Contact = ({ contact: { name, number, id } }) => {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    subtitle.style.color = ' #212572;';
   }
 
   function closeModal() {
@@ -62,7 +62,9 @@ const Contact = ({ contact: { name, number, id } }) => {
         <h2 ref={_subtitle => (subtitle = _subtitle)}>
           Do you really want to delete this contact?
         </h2>
-        <button onClick={handleDelete}>Yes, delete!</button>
+        <button className={css.btn} onClick={handleDelete}>
+          Yes, delete!
+        </button>
       </Modal>
     </div>
   );
