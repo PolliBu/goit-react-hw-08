@@ -1,4 +1,4 @@
-import { TitlePage } from '../../components/TitlePage/TitlePage';
+import TitlePage from '../../components/TitlePage/TitlePage';
 
 const styles = {
   container: {
