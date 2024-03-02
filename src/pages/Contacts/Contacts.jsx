@@ -28,8 +28,3 @@ export default function Tasks() {
     </>
   );
 }
-
-//         <Title />
-//         <ContactForm />
-//         <SearchBox />
-//         {isLoading && !error && <ContactList />}
