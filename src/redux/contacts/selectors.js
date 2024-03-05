@@ -23,3 +23,8 @@ export const selectVisibleContacts = createSelector(
     return fuse.search(filter).map(contact => contact.item);
   },
 );
+
+//  return contactResults.filter(
+//     contact =>
+//       contact.name.toLowerCase().includes(filter.toLowerCase()) ||
+//       contact.number.includes(filter),

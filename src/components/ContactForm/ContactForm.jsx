@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid/non-secure';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
+import Button from '@mui/material/Button';
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
@@ -69,10 +70,9 @@ const ContactForm = () => {
           />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-
-        <button className={css.btn} type="submit">
+        <Button variant="contained" className={css.btn} type="submit">
           Add contact
-        </button>
+        </Button>
       </Form>
     </Formik>
   );

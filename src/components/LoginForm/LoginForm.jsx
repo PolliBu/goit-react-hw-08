@@ -2,6 +2,7 @@ import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import css from './LoginForm.module.css';
+import Button from '@mui/material/Button';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -35,9 +36,9 @@ const LoginForm = () => {
         Password
         <input type="password" name="password" />
       </label>
-      <button className={css.btn} type="submit">
+      <Button variant="contained" className={css.btn} type="submit">
         Log In
-      </button>
+      </Button>
     </form>
   );
 };

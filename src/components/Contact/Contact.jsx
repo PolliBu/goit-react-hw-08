@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/operations';
 import Modal from 'react-modal';
 import React from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Button from '@mui/material/Button';
 
 const customStyles = {
   content: {
@@ -49,9 +51,15 @@ const Contact = ({ contact: { name, number, id } }) => {
           <FaPhone /> {number}
         </p>
       </div>
-      <button className={css.btn} onClick={openModal}>
+      <Button
+        variant="outlined"
+        startIcon={<DeleteIcon />}
+        // className={css.btn}
+        onClick={openModal}
+      >
         Delete
-      </button>
+      </Button>
+
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -62,9 +70,9 @@ const Contact = ({ contact: { name, number, id } }) => {
         <h2 ref={_subtitle => (subtitle = _subtitle)}>
           Do you really want to delete this contact?
         </h2>
-        <button className={css.btn} onClick={handleDelete}>
+        <Button variant="contained" onClick={handleDelete}>
           Yes, delete!
-        </button>
+        </Button>
       </Modal>
     </div>
   );
