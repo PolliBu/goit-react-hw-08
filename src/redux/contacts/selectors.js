@@ -12,16 +12,14 @@ export const selectError = state => state.contacts.error;
 export const selectVisibleContacts = createSelector(
   [selectContacts, selectContactsFilter],
   (contacts, filter) => {
-    const fuse = new Fuse(contacts, {
+    if (filter === '') {
+      return contacts;
+    }
+    const options = {
       keys: ['name', 'number'],
       includeScore: true,
-    });
-    const results = fuse.search('j');
-    const contactResults = results.map(result => result.item);
-    return contactResults.filter(
-      contact =>
-        contact.name.toLowerCase().includes(filter.toLowerCase()) ||
-        contact.number.includes(filter),
-    );
+    };
+    const fuse = new Fuse(contacts, options);
+    return fuse.search(filter).map(contact => contact.item);
   },
 );
