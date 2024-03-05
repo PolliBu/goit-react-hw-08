@@ -54,7 +54,7 @@ const Contact = ({ contact: { name, number, id } }) => {
       <Button
         variant="outlined"
         startIcon={<DeleteIcon />}
-        // className={css.btn}
+        className={css.btn}
         onClick={openModal}
       >
         Delete
@@ -70,7 +70,7 @@ const Contact = ({ contact: { name, number, id } }) => {
         <h2 ref={_subtitle => (subtitle = _subtitle)}>
           Do you really want to delete this contact?
         </h2>
-        <Button variant="contained" onClick={handleDelete}>
+        <Button className={css.btn} variant="contained" onClick={handleDelete}>
           Yes, delete!
         </Button>
       </Modal>
